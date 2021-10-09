@@ -7,3 +7,9 @@
     @apply text-white bg-background;
   }
 }
+
+@layer components{
+.heading{
+  @apply text-2xl font-bold mb-5 mb-5 text-3xl font-bold
+}
+}

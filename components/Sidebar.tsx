@@ -17,16 +17,12 @@ export default function Sidebar() {
 
   return (
     <aside
-      className={`h-full col-span-1 bg-black ${
+      className={`h-screen col-span-1 bg-black sticky top-0 left-0 border bottom-0 ${
         router.pathname === "/login" ? "hidden" : "block"
       }`}
     >
       <div className="flex flex-col items-center h-full m-5 mt-5">
-        <img
-          src="/images/spotify_logo.png"
-          className="object-contain w-4/6"
-          alt="Spotify logo"
-        />
+        <img src="/images/spotify_logo.png" className="object-contain w-4/6" alt="Spotify logo" />
 
         <ul className="w-full mt-8">
           <Link href="/">
@@ -59,9 +55,7 @@ export default function Sidebar() {
             <a>
               <li
                 className={`${
-                  router.pathname === "/collection/playlists"
-                    ? activeLink
-                    : inactiveLink
+                  router.pathname === "/collection/playlists" ? activeLink : inactiveLink
                 } flex items-center gap-3 p-2 text-sm rounded cursor-pointer  hover:text-white`}
               >
                 <span className="material-icons">list</span>
@@ -74,16 +68,10 @@ export default function Sidebar() {
             <a>
               <li
                 className={`${
-                  router.pathname === "/collection/tracks"
-                    ? "text-white"
-                    : "text-gray"
+                  router.pathname === "/collection/tracks" ? "text-white" : "text-gray"
                 } flex items-center mt-6 gap-3 p-2 text-sm rounded cursor-pointer  hover:text-white`}
               >
-                <img
-                  src="/images/liked_cover.jpeg"
-                  className="object-contain w-7 h-7"
-                  alt="Liked playlist cover"
-                />
+                <img src="/images/liked_cover.jpeg" className="object-contain w-7 h-7" alt="Liked playlist cover" />
                 <span className="font-bold">Liked songs</span>
               </li>
             </a>
@@ -96,10 +84,7 @@ export default function Sidebar() {
           {playlists?.map((playlist) => (
             <Link href={`/playlist/${playlist.id}`}>
               <a className="w-full">
-                <li
-                  key={playlist.id}
-                  className="truncate cursor-default hover:text-white"
-                >
+                <li key={playlist.id} className="truncate cursor-default hover:text-white">
                   {playlist.name}
                 </li>
               </a>

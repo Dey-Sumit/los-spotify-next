@@ -7,7 +7,7 @@ import Sidebar from "../components/Sidebar";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
+const router = useRouter();
 
   return router.pathname === "/login" ? (
     <Layout pageProps={pageProps}>

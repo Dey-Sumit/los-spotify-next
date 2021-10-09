@@ -10,10 +10,10 @@ export default function Home({ newReleases, featuredPlaylists }) {
     <div className="w-full p-4">
       <h1 className="mb-5 text-3xl font-bold">Good {getGreeting()}</h1>
 
-      <Heading text="New releases" className="mt-10" />
+      <h1 className="mt-10 heading">New releases </h1>
       <AlbumList albums={newReleases?.albums.items} />
 
-      <Heading text={featuredPlaylists?.message} className="mt-16" />
+      <h1 className="mt-16 heading">{featuredPlaylists?.message} </h1>
       <PlaylistList playlists={featuredPlaylists?.playlists.items} />
     </div>
   );
