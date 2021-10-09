@@ -33,7 +33,7 @@ export default function Sidebar() {
                 } flex text-sm items-center gap-3 p-2 rounded`}
               >
                 <span className="material-icons">home</span>
-                <span className="font-bold">Home</span>
+                <span className="hidden font-bold md:block">Home</span>
               </li>
             </a>
           </Link>
@@ -46,7 +46,7 @@ export default function Sidebar() {
                 } flex items-center gap-3 p-2 text-sm rounded cursor-pointer  hover:text-white`}
               >
                 <span className="material-icons">search</span>
-                <span className="font-bold">Search</span>
+                <span className="hidden font-bold md:block">Search</span>
               </li>
             </a>
           </Link>
@@ -59,7 +59,7 @@ export default function Sidebar() {
                 } flex items-center gap-3 p-2 text-sm rounded cursor-pointer  hover:text-white`}
               >
                 <span className="material-icons">list</span>
-                <span className="font-bold">Your Library</span>
+                <span className="hidden font-bold md:block">Your Library</span>
               </li>
             </a>
           </Link>
@@ -72,7 +72,7 @@ export default function Sidebar() {
                 } flex items-center mt-6 gap-3 p-2 text-sm rounded cursor-pointer  hover:text-white`}
               >
                 <img src="/images/liked_cover.jpeg" className="object-contain w-7 h-7" alt="Liked playlist cover" />
-                <span className="font-bold">Liked songs</span>
+                <span className="hidden font-bold md:block">Liked songs</span>
               </li>
             </a>
           </Link>
